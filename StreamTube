@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamTube</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #f1f1f1;
+        }
+
+        /* Top Navigation Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0f0f0f;
+            padding: 10px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #272727;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ff0000;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .search-bar {
+            display: flex;
+            width: 45%;
+            max-width: 600px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px 16px;
+            background-color: #121212;
+            border: 1px solid #303030;
+            border-radius: 40px 0 0 40px;
+            color: #ffffff;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .search-bar input:focus {
+            border-color: #1c62b9;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #222222;
+            border: 1px solid #303030;
+            border-left: none;
+            border-radius: 0 40px 40px 0;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .search-bar button:hover {
+            background-color: #272727;
+        }
+
+        .header-right button {
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Video Grid Layout */
+        main {
+            padding: 24px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .thumbnail-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #272727;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-details {
+            display: flex;
+            margin-top: 12px;
+            gap: 12px;
+        }
+
+        .channel-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #333333;
+            flex-shrink: 0;
+        }
+
+        .video-meta h3 {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #f1f1f1;
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-meta p {
+            font-size: 12px;
+            color: #aaaaaa;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo">StreamTube</a>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button type="submit">Search</button>
+        </div>
+        
+        <div class="header-right">
+            <button>Sign In</button>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main>
+        <section class="video-grid">
+            
+            <!-- Video Card 1 -->
+            <article class="video-card">
+                <div class="thumbnail-container"></div>
+                <div class="video-details">
+                    <div class="channel-avatar"></div>
+                    <div class="video-meta">
+                        <h3>Building StreamTube: Complete Platform Walkthrough</h3>
+                        <p>StreamTube Tech</p>
+                        <p>150K views • 3 days ago</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 2 -->
+            <article class="video-card">
+                <div class="thumbnail-container"></div>
+                <div class="video-details">
+                    <div class="channel-avatar"></div>
+                    <div class="video-meta">
+                        <h3>How to Make Content Go Viral in 2026</h3>
+                        <p>Creator Insights</p>
+                        <p>420K views • 1 week ago</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 3 -->
+            <article class="video-card">
+                <div class="thumbnail-container"></div>
+                <div class="video-details">
+                    <div class="channel-avatar"></div>
+                    <div class="video-meta">
+                        <h3>Responsive Design Mastery with HTML & CSS</h3>
+                        <p>Web Dev Daily</p>
+                        <p>89K views • 2 weeks ago</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 4 -->
+            <article class="video-card">
+                <div class="thumbnail-container"></div>
+                <div class="video-details">
+                    <div class="channel-avatar"></div>
+                    <div class="video-meta">
+                        <h3>Top 10 Video Editing Tips for Beginners</h3>
+                        <p>Studio Secrets</p>
+                        <p>12K views • 5 hours ago</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
